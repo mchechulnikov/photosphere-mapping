@@ -11,5 +11,5 @@ before_build:
   - cd ..
 
 build:
-  project: src\photosphere-mappings.sln
+  project: src\photosphere-mapping.sln
   verbosity: minimal
