@@ -7,9 +7,9 @@ Simple hight perfomance object mapper based on emitting IL code at runtime.
 ## Interface
 This tiny library gives next extensions methods
 ``` C#
-void Map<TSource, TTarget>(this TTarget target, TSource source);    // Map from existent object to another one.
-void Map(this object target, object source);                        // Map from existent object to another one.
-TTarget Map<TSource, TTarget>(this TSource source);                 // Map from existent object to new object.
+void Map<TSource, TTarget>(this TTarget target, TSource source);    // Map from existent object to another one
+void Map(this object target, object source);                        // Map from existent object to another one
+TTarget Map<TSource, TTarget>(this TSource source);                 // Map from existent object to new object
 ```
 
 ## Examples
