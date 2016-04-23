@@ -8,8 +8,8 @@ configuration: Release
 environment:
   solutionPath: src\photosphere-mapping.sln
   projectName: Photosphere.Mapping
-  projectPath: src\{projectName}
-  nuspecPath: {projectPath}\{projectName}.nuspec
+  projectPath: "src\{projectName}"
+  nuspecPath: "{projectPath}\{projectName}.nuspec"
 
 assembly_info:
   patch: true
