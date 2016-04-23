@@ -18,3 +18,4 @@ build:
 
 artifacts:
   - path: src\Photosphere.Mapping\bin\$(configuration)\
+    name: Photosphere.Mapping
