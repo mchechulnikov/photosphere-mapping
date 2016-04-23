@@ -5,6 +5,19 @@ version: 1.0.{build}
 
 configuration: Release
 
+environment:
+  solutionPath: src\photosphere-mapping.sln
+  projectName: Photosphere.Mapping
+  projectPath: src\$(projectName)
+  nuspecPath: $(projectPath)\$(projectName).nuspec
+
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
 before_build:
   - cd src
   - nuget restore
@@ -17,5 +30,5 @@ build:
   publish_nuget_symbols: true
 
 artifacts:
-  - path: src\Photosphere.Mapping\bin\$(configuration)\
-    name: Photosphere.Mapping
+  - path: $(projectPath)\bin\$(configuration)\
+    name: $(projectName)
