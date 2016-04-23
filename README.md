@@ -3,10 +3,10 @@ Simple hight perfomance object mapper based on emitting CIL code.
 
 ## Status
 <a href="https://ci.appveyor.com/project/sunloving/photosphere-mapping" target="_blank">
-  [Windows build Status](https://ci.appveyor.com/api/projects/status/github/sunloving/photosphere-mapping?retina=true&svg=true)
+  ![Windows build Status](https://ci.appveyor.com/api/projects/status/github/sunloving/photosphere-mapping?retina=true&svg=true)
 </a>
 <a href="https://www.nuget.org/packages/Photosphere.Mapping/" target="_blank">
-  [NuGet](https://img.shields.io/nuget/v/Photosphere.Mapping.svg?maxAge=2592000)
+  ![NuGet](https://img.shields.io/nuget/v/Photosphere.Mapping.svg?maxAge=2592000)
 </a>
 
 ## Interface
@@ -25,5 +25,5 @@ var buz = foo.Map<Foo, Buz>();    // Map object foo to new object buz
 
 ## License
 <a href="https://github.com/sunloving/photosphere-mapping/blob/master/LICENSE" target="_blank">
-  [license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)
+  ![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)
 </a>
