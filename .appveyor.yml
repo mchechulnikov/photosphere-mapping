@@ -22,8 +22,10 @@ before_build:
   - cd src
   - nuget restore
   - cd ..
-  - ps: $nuspec = [xml](Get-Content .\$(projectPath)\$(projectName).nuspec)
-  - ps: echo $nuspec
+  - ps:
+    $nuspec = [xml](Get-Content .\$env:nuspecPath)
+    $nuspec.package.metadata.version = $env:APPVEYOR_BUILD_VERSION
+    $nuspec.Save()
 
 build:
   verbosity: minimal  
