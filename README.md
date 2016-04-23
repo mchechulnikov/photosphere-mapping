@@ -22,4 +22,4 @@ var buz = foo.Map<Foo, Buz>();    // Map object foo to new object buz
 1. Recursive mapping
 
 ## License
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)]()
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/sunloving/photosphere-mapping/blob/master/LICENSE)
