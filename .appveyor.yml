@@ -18,4 +18,4 @@ build:
 
 artifacts:
   - path: src\Photosphere.Mapping\bin\$(configuration)\
-    name: Photospere.Mapping-{version}
+    name: Photospere.Mapping-$(version)
