@@ -17,5 +17,5 @@ build:
   publish_nuget_symbols: true
 
 artifacts:
-  - path: src\Photosphere.Mappings\bin\$(configuration)\
+  - path: src\Photosphere.Mapping\bin\$(configuration)\
     name: Photospere.Mapping-{version}
