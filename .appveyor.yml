@@ -21,7 +21,7 @@ before_build:
   - cd %sourcesFolder%
   - nuget restore
   - cd ..
-  - ps: $nuspecPath = ".\" + $env:sourcesFolder + "\" + $env:projectName + "\" + $env:projectName + ".nuspec"
+  - ps: $nuspecPath = "$env:APPVEYOR_BUILD_FOLDER\$env:sourcesFolder\$env:projectName\$env:projectName.nuspec"
   - ps: $nuspec = [xml](Get-Content $nuspecPath)
   - ps: $nuspec.package.metadata.version = $env:APPVEYOR_BUILD_VERSION
   - ps: $nuspec.Save($nuspecPath)
