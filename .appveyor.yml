@@ -18,7 +18,7 @@ assembly_info:
   assembly_informational_version: "{version}"
 
 before_build:
-  - cd sourcesFolder
+  - cd %sourcesFolder%
   - nuget restore
   - cd ..
   - ps: $nuspec = [xml](Get-Content .\$env:sourcesFolder\$env:projectName\$env:projectName.nuspec)
