@@ -3,6 +3,7 @@ Simple hight perfomance object mapper based on emitting CIL code.
 
 ## Status
 [![Windows build Status](https://ci.appveyor.com/api/projects/status/github/sunloving/photosphere-mapping?retina=true&svg=true)](https://ci.appveyor.com/project/sunloving/photosphere-mapping)
+[![NuGet](https://img.shields.io/nuget/v/Photosphere.Mapping.svg?maxAge=2592000)](https://www.nuget.org/packages/Photosphere.Mapping/)
 
 ## Interface
 This tiny library gives next extensions methods
