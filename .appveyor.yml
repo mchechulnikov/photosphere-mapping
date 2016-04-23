@@ -22,7 +22,8 @@ before_build:
   - cd src
   - nuget restore
   - cd ..
-  - echo !!!! $(solutionPath)
+  - ps: $nuspec = [xml](Get-Content .\$(projectPath)\$(projectName).nuspec)
+  - ps: echo $nuspec
 
 build:
   verbosity: minimal  
