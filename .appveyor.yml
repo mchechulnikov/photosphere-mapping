@@ -38,9 +38,8 @@ artifacts:
 
 deploy:
   - provider: NuGet
-    server: https://my.nuget.server/feed
+    server: https://www.nuget.org
     api_key:
       secure: ddglAApbf5fja6dAaDstiBmewHSQ09BHjeLiQpA/WVvyTaSBmARSdH3xOjlAzkcQ
-    skip_symbols: false
-    symbol_server: https://your.symbol.server/feed
+    skip_symbols: true
     artifact: $(projectName).$(APPVEYOR_BUILD_VERSION).nupkg
