@@ -6,10 +6,9 @@ version: 1.0.{build}
 configuration: Release
 
 environment:
-  solutionPath: src\photosphere-mapping.sln
+  sourcesFolder: src
+  solutionName: photosphere-mapping.sln
   projectName: Photosphere.Mapping
-  projectPath: "src\{projectName}"
-  nuspecPath: "{projectPath}\{projectName}.nuspec"
 
 assembly_info:
   patch: true
@@ -19,19 +18,19 @@ assembly_info:
   assembly_informational_version: "{version}"
 
 before_build:
-  - cd src
+  - cd $(sourcesFolder)
   - nuget restore
   - cd ..
-  - ps: $nuspec = [xml](Get-Content .\$env:nuspecPath)
+  - ps: $nuspec = [xml](Get-Content .\$env:sourcesFolder\$env:projectName\$env:projectName.nuspec)
   - ps: $nuspec.package.metadata.version = $env:APPVEYOR_BUILD_VERSION
   - ps: $nuspec.Save()
 
 build:
   verbosity: minimal  
-  project: $(solutionPath)
+  project: $(sourcesFolder)\$(solutionName)
   publish_nuget: true
   publish_nuget_symbols: true
 
 artifacts:
-  - path: $(projectPath)\bin\$(configuration)\
-    name: $(projectName)
+  - path: $(sourcesFolder)\$(projectName)\bin\$(configuration)\
+    name: $(projectName)-$(APPVEYOR_BUILD_VERSION)
