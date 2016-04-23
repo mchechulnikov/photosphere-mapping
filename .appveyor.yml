@@ -25,7 +25,7 @@ before_build:
 
 build:
   verbosity: minimal  
-  project: src\photosphere-mapping.sln
+  project: $(solutionPath)
   publish_nuget: true
   publish_nuget_symbols: true
 
