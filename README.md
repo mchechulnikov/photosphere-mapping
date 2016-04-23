@@ -6,7 +6,7 @@ Simple hight perfomance object mapper based on emitting CIL code.
 [![NuGet](https://img.shields.io/nuget/v/Photosphere.Mapping.svg?maxAge=2592000)](https://www.nuget.org/packages/Photosphere.Mapping/)
 
 ## Interface
-This tiny library gives next extensions methods
+This tiny library gives next extension methods
 ``` C#
 void Map<TSource, TTarget>(this TTarget target, TSource source);    // Map from existent object to another one
 void Map(this object target, object source);                        // Map from existent object to another one
