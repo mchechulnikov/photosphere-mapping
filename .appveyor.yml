@@ -22,6 +22,7 @@ before_build:
   - cd src
   - nuget restore
   - cd ..
+  - echo !!!! $(solutionPath)
 
 build:
   verbosity: minimal  
