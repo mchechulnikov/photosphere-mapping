@@ -14,19 +14,25 @@ TTarget Map<TSource, TTarget>(this TSource source);                     // Map f
 ```
 
 ## Examples
-Map object `bar` to existent object `foo`
+Map object `source` to existent object `target`
 ``` C#
-foo.MapFrom(bar);
+target.MapFrom(source);
 ```
-Map object `foo` to new object `buz`
+Map object `source` of type `Foo` to new object `target` of type `Bar`
 ``` C#
-var buz = foo.Map<Foo, Buz>();
+var target = source.Map<Foo, Bar>();
 ```
 You can perform mapping from anonymous type
 ``` C#
-var foo = new { A = "a", B = 1 };
-bar.MapFromObject(foo);
+var source = new { A = "a", B = 1 };
+target.MapFromObject(source);
 ```
+or
+``` C#
+var source = new { A = "a", B = 1 };
+var target = source.MapFromObject<Bar>();
+```
+but not vice versa, because anonymous types are immutable by design.
 
 ## Perfomance?
 :soon:
