@@ -33,7 +33,7 @@ or
 var source = new { A = "a", B = 1 };
 var target = source.MapObject<Bar>();
 ```
-but not vice versa, because anonymous types are immutable by design.
+but not vice versa (to anonymous type object), because anonymous types are immutable by design.
 
 ## Perfomance?
 :soon:
