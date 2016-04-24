@@ -46,7 +46,6 @@ deploy:
     artifact: $(projectName).$(APPVEYOR_BUILD_VERSION).nupkg
     
   - provider: GitHub
-    release: $(projectName)-v$(APPVEYOR_BUILD_VERSION)
     artifact: /.*\.zip/
     draft: false
     prerelease: false
