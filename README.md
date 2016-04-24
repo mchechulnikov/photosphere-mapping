@@ -14,15 +14,15 @@ TTarget Map<TSource, TTarget>(this TSource source);                     // Map f
 ```
 
 ## Examples
-Map object bar to existent object foo
+Map object `bar` to existent object `foo`:
 ``` C#
 foo.MapFrom(bar);
 ```
-or to new object:
+Map object `foo` to new object `buz`:
 ``` C#
 var buz = foo.Map<Foo, Buz>();
 ```
-or you can perform mapping from anonymous type:
+You can perform mapping from anonymous type:
 ``` C#
 var foo = new { A = "a", B = 1 };
 bar.MapFromObject(foo);
