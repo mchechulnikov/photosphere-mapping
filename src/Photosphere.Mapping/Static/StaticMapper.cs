@@ -6,7 +6,7 @@ using Photosphere.Mapping.Extensions;
 namespace Photosphere.Mapping.Static
 {
     internal static class StaticMapper<TSource, TTarget>
-        where TTarget : class, new()
+        where TTarget : new()
     {
         private static readonly Action<TSource, TTarget> ProduceMapping;
 
@@ -34,6 +34,11 @@ namespace Photosphere.Mapping.Static
 
         public static void Map(object source, object target)
         {
+            if (target.GetType().IsAnonymous())
+            {
+                var message = $"`{nameof(target)}` is anonymous type. Anonymous types doesn't allowed to be mapped to bacause it's immutable by design";
+                throw new ArgumentException(message);
+            }
             var mapAction = GetMapAction(source.GetType(), target.GetType());
             mapAction(source, target);
         }

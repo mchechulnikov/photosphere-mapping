@@ -56,7 +56,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MapperTests.cs" />
+    <Compile Include="MapFromGenericTests.cs" />
+    <Compile Include="MapFromObjectTests.cs" />
+    <Compile Include="MapGenericTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestClasses\Bar.cs" />
     <Compile Include="TestClasses\Foo.cs" />

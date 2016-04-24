@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Photosphere.Mapping.Tests
 {
-    public class MapperTests
+    public class MapGenericTests
     {
         [Fact]
         internal static void Map_DtoToWiderDto_ValidResult()

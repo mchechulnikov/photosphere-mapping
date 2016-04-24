@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Security.Permissions;
 using Photosphere.Mapping.Extensions;
 
 namespace Photosphere.Mapping.Static
@@ -10,7 +11,7 @@ namespace Photosphere.Mapping.Static
     internal static class MapFunctionGenerator
     {
         public static Action<TSource, TTarget> Generate<TSource, TTarget>()
-            where TTarget : class, new()
+            where TTarget : new()
         {
             var dynamicMethod = GetDynamicMethod(typeof(TSource), typeof(TTarget));
             return (Action<TSource, TTarget>)dynamicMethod.CreateDelegate(typeof(Action<TSource, TTarget>));
@@ -32,7 +33,7 @@ namespace Photosphere.Mapping.Static
 
         private static DynamicMethod GetDynamicMethod(Type sourceType, Type targetType)
         {
-            var dynamicMethod = new DynamicMethod("MappingMethod", null, new[] { sourceType, targetType });
+            var dynamicMethod = new DynamicMethod("MappingMethod", null, new[] { sourceType, targetType }, true);
             var ilGenerator = dynamicMethod.GetILGenerator();
             GenerateParameters(dynamicMethod);
             GenerateMapMethodBody(ilGenerator, sourceType, targetType);
@@ -79,7 +80,7 @@ namespace Photosphere.Mapping.Static
 
         private static bool IsMappableProperty(PropertyInfo tp, PropertyInfo sp)
         {
-            return tp.Name == sp.Name && tp.PropertyType == sp.PropertyType;
+            return tp.Name == sp.Name && (tp.PropertyType == sp.PropertyType || tp.PropertyType.IsAssignableFrom(sp.PropertyType));
         }
 
         private class AssignmentPropertiesMethods

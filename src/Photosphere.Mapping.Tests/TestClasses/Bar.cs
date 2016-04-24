@@ -2,7 +2,7 @@
 
 namespace Photosphere.Mapping.Tests.TestClasses
 {
-    public class Bar
+    internal class Bar
     {
         public string A { get; set; }
 
