@@ -41,5 +41,14 @@ deploy:
     server: https://www.nuget.org
     api_key:
       secure: ddglAApbf5fja6dAaDstiBmewHSQ09BHjeLiQpA/WVvyTaSBmARSdH3xOjlAzkcQ
-    skip_symbols: true
+    skip_symbols: false
+    symbol_server: nuget.smbsrc.net
     artifact: $(projectName).$(APPVEYOR_BUILD_VERSION).nupkg
+    
+  - provider: GitHub
+    artifact: /.*\.zip/
+    draft: false
+    prerelease: false
+    on:
+      branch: master
+      appveyor_repo_tag: true
