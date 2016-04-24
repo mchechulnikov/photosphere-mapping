@@ -41,3 +41,7 @@ It is easy to see that at the start it takes longer than a manual mapping, but t
 
 ## License
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/sunloving/photosphere-mapping/blob/master/LICENSE)
+
+## Other Photosphere projects
+* [Photosphere.DependencyInjection](https://github.com/sunloving/photosphere-di)
+* [Photosphere.Contracts](https://github.com/sunloving/photosphere-contracts)
