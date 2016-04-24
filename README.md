@@ -14,19 +14,22 @@ TTarget Map<TSource, TTarget>(this TSource source);                     // Map f
 ```
 
 ## Examples
-Map object `bar` to existent object `foo`:
+Map object `bar` to existent object `foo`
 ``` C#
 foo.MapFrom(bar);
 ```
-Map object `foo` to new object `buz`:
+Map object `foo` to new object `buz`
 ``` C#
 var buz = foo.Map<Foo, Buz>();
 ```
-You can perform mapping from anonymous type:
+You can perform mapping from anonymous type
 ``` C#
 var foo = new { A = "a", B = 1 };
 bar.MapFromObject(foo);
 ```
+
+## Perfomance?
+:soon:
 
 ## License
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/sunloving/photosphere-mapping/blob/master/LICENSE)
