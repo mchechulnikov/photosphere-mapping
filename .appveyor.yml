@@ -44,11 +44,3 @@ deploy:
     skip_symbols: false
     symbol_server: nuget.smbsrc.net
     artifact: $(projectName).$(APPVEYOR_BUILD_VERSION).nupkg
-    
-  - provider: GitHub
-    artifact: /.*\.zip/
-    draft: false
-    prerelease: false
-    on:
-      branch: master
-      appveyor_repo_tag: true
