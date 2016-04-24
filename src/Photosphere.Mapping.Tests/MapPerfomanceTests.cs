@@ -39,7 +39,7 @@ namespace Photosphere.Mapping.Tests
                 Mapping = RepeatAndAccumulateMilliseconds(timesOfMeasure, (source, target) => source.MapTo(target)),
                 Native = RepeatAndAccumulateMilliseconds(timesOfMeasure, LargeFoo.NativeMap)
             };
-            _output.WriteLine($"Times of mapping: {timesOfMeasure}\n" + result);
+            _output.WriteLine($"Amount of mapping iterations: {timesOfMeasure}\n" + result);
         }
 
         private static long RepeatAndAccumulateMilliseconds(int timesToRepeat, Action<LargeFoo, LargeFoo> action)
@@ -68,7 +68,7 @@ namespace Photosphere.Mapping.Tests
 
             public override string ToString()
             {
-                return $"\n{nameof(Mapping)}:\t{Mapping}\n{nameof(Native)}:\t\t{Native}\n";
+                return $"\n{nameof(Mapping)}:\t{Mapping} ms\n{nameof(Native)}:\t\t{Native} ms\n";
             }
         }
     }
