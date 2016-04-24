@@ -18,10 +18,11 @@ Map object bar to existent object foo
 ``` C#
 foo.MapFrom(bar);
 ```
+or to new object:
 ``` C#
 var buz = foo.Map<Foo, Buz>();
 ```
-You can perform mapping from anonymous type:
+or you can perform mapping from anonymous type:
 ``` C#
 var foo = new { A = "a", B = 1 };
 bar.MapFromObject(foo);
