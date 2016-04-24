@@ -11,6 +11,7 @@ This tiny library gives next extension methods
 void MapTo<TSource, TTarget>(this TTarget target, TSource source);    // Map from existent object to another one
 void MapToObject(this object target, object source);                  // Map from existent object to another one
 TTarget Map<TSource, TTarget>(this TSource source);                   // Map from existent object to new object
+TTarget MapObject<TTarget>(this object source);                       // Map from existent object to new object
 ```
 
 ## Examples
@@ -30,7 +31,7 @@ source.MapToObject(target);
 or
 ``` C#
 var source = new { A = "a", B = 1 };
-var target = source.MapFromObject<Bar>();
+var target = source.MapObject<Bar>();
 ```
 but not vice versa, because anonymous types are immutable by design.
 
