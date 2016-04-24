@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Extensions\ConcurrentDictionaryExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Static\Exceptions\MapToAnonymousTypeException.cs" />
     <Compile Include="Static\MapFunctionGenerator.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

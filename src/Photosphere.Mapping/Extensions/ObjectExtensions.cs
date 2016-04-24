@@ -23,5 +23,12 @@ namespace Photosphere.Mapping.Extensions
         {
             StaticMapper.Map(source, target);
         }
+
+        /// <summary> Map from object source to new object of TTarget</summary>
+        public static TTarget MapFromObject<TTarget>(this object source)
+            where TTarget : new()
+        {
+            return StaticMapper.Map<TTarget>(source);
+        }
     }
 }

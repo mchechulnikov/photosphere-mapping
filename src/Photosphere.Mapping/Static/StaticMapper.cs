@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using Photosphere.Mapping.Extensions;
+using Photosphere.Mapping.Static.Exceptions;
 
 namespace Photosphere.Mapping.Static
 {
@@ -34,13 +35,25 @@ namespace Photosphere.Mapping.Static
 
         public static void Map(object source, object target)
         {
-            if (target.GetType().IsAnonymous())
-            {
-                var message = $"`{nameof(target)}` is anonymous type. Anonymous types doesn't allowed to be mapped to bacause it's immutable by design";
-                throw new ArgumentException(message);
-            }
+            CheckType(target);
             var mapAction = GetMapAction(source.GetType(), target.GetType());
             mapAction(source, target);
+        }
+
+        public static TTarget Map<TTarget>(object source)
+            where TTarget : new()
+        {
+            var target = new TTarget();
+            Map(source, target);
+            return target;
+        }
+
+        private static void CheckType(object target)
+        {
+            if (target.GetType().IsAnonymous())
+            {
+                throw new MapToAnonymousTypeException();
+            };
         }
 
         private static Action<object, object> GetMapAction(Type sourceType, Type targetType)
