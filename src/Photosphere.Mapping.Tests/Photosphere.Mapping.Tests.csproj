@@ -60,9 +60,11 @@
     <Compile Include="MapFromObjectGenericTests.cs" />
     <Compile Include="MapFromObjectTests.cs" />
     <Compile Include="MapGenericTests.cs" />
+    <Compile Include="MapPerfomanceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestClasses\Bar.cs" />
     <Compile Include="TestClasses\Foo.cs" />
+    <Compile Include="TestClasses\LargeFoo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
