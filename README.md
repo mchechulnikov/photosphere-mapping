@@ -8,15 +8,15 @@ Simple hight perfomance object mapper based on emitting CIL code.
 ## Interface
 This tiny library gives next extension methods
 ``` C#
-void MapFrom<TSource, TTarget>(this TTarget target, TSource source);    // Map from existent object to another one
-void MapFromObject(this object target, object source);                  // Map from existent object to another one
-TTarget Map<TSource, TTarget>(this TSource source);                     // Map from existent object to new object
+void MapTo<TSource, TTarget>(this TTarget target, TSource source);    // Map from existent object to another one
+void MapToObject(this object target, object source);                  // Map from existent object to another one
+TTarget Map<TSource, TTarget>(this TSource source);                   // Map from existent object to new object
 ```
 
 ## Examples
 Map object `source` to existent object `target`
 ``` C#
-target.MapFrom(source);
+source.MapTo(target);
 ```
 Map object `source` of type `Foo` to new object `target` of type `Bar`
 ``` C#
@@ -25,7 +25,7 @@ var target = source.Map<Foo, Bar>();
 You can perform mapping from anonymous type
 ``` C#
 var source = new { A = "a", B = 1 };
-target.MapFromObject(source);
+source.MapToObject(target);
 ```
 or
 ``` C#

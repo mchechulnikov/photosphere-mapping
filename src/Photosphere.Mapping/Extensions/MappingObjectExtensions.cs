@@ -2,10 +2,10 @@
 
 namespace Photosphere.Mapping.Extensions
 {
-    public static class ObjectExtensions
+    public static class MappingObjectExtensions
     {
         /// <summary> Map from source to existent object target</summary>
-        public static void MapFrom<TSource, TTarget>(this TTarget target, TSource source)
+        public static void MapTo<TSource, TTarget>(this TSource source, TTarget target)
             where TTarget : class, new()
         {
             StaticMapper<TSource, TTarget>.Map(source, target);
@@ -19,13 +19,13 @@ namespace Photosphere.Mapping.Extensions
         }
 
         /// <summary> Map from object source to existent object target</summary>
-        public static void MapFromObject(this object target, object source)
+        public static void MapToObject(this object source, object target)
         {
             StaticMapper.Map(source, target);
         }
 
         /// <summary> Map from object source to new object of TTarget</summary>
-        public static TTarget MapFromObject<TTarget>(this object source)
+        public static TTarget MapObject<TTarget>(this object source)
             where TTarget : new()
         {
             return StaticMapper.Map<TTarget>(source);

@@ -25,7 +25,7 @@ namespace Photosphere.Mapping.Tests
                 D = false,
                 E = "E"
             };
-            bar.MapFromObject(foo);
+            foo.MapToObject(bar);
             Assert.Equal(foo.A, bar.A);
             Assert.Equal(foo.B, bar.B);
             Assert.Equal(foo.C, bar.C);
@@ -51,7 +51,7 @@ namespace Photosphere.Mapping.Tests
                 C = 0,
                 D = false
             };
-            foo.MapFromObject(bar);
+            bar.MapToObject(foo);
             Assert.Equal(foo.A, bar.A);
             Assert.Equal(foo.B, bar.B);
             Assert.Equal(foo.C, bar.C);
