@@ -44,4 +44,3 @@ It is easy to see that at the start it takes longer than a manual mapping, but t
 
 ## Other Photosphere projects
 * [Photosphere.DependencyInjection](https://github.com/sunloving/photosphere-di)
-* [Photosphere.Contracts](https://github.com/sunloving/photosphere-contracts)
