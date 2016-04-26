@@ -51,8 +51,8 @@ namespace Photosphere.Mapping.Static
         {
             foreach (var pair in GetAssignementPropertiesPairs(sourceType, targetType))
             {
-                generator.Emit(OpCodes.Ldarg, 1);
-                generator.Emit(OpCodes.Ldarg, 0);
+                generator.Emit(OpCodes.Ldarg_1);
+                generator.Emit(OpCodes.Ldarg_0);
                 generator.Emit(OpCodes.Callvirt, pair.SourcePropertyGetter);
                 generator.Emit(OpCodes.Callvirt, pair.TargetPropertySetter);
             }
