@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using System.Security.Permissions;
 using Photosphere.Mapping.Extensions;
 
 namespace Photosphere.Mapping.Static

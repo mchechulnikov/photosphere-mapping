@@ -29,7 +29,6 @@ namespace Photosphere.Mapping.Tests
             PerformMeasuring(8000);
             PerformMeasuring(9000);
             PerformMeasuring(10000);
-            Assert.True(true);
         }
 
         private void PerformMeasuring(int timesOfMeasure)
@@ -49,7 +48,7 @@ namespace Photosphere.Mapping.Tests
             while (index < timesToRepeat)
             {
                 var source = LargeFoo.GetRandomNew();
-                var target = new LargeFoo();
+                var target = LargeFoo.GetRandomNew();
 
                 stopWatch.Start();
                 action(source, target);
