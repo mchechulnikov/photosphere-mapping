@@ -7,7 +7,7 @@ Simple hight perfomance object mapper based on emitting CIL code.
 
 ## Install via NuGet
 ```
-Install-Package Photosphere.Mapping
+PM> Install-Package Photosphere.Mapping
 ```
 
 ## Interface
