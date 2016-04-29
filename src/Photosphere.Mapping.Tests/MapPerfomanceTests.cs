@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using Photosphere.Mapping.Extensions;
+using Photosphere.Mapping.Static;
 using Photosphere.Mapping.Tests.TestClasses;
 using Xunit;
 using Xunit.Abstractions;
@@ -35,8 +35,8 @@ namespace Photosphere.Mapping.Tests
         {
             var result = new MeasureResult
             {
-                Mapping = RepeatAndAccumulateMilliseconds(timesOfMeasure, (source, target) => source.MapTo(target)),
-                Native = RepeatAndAccumulateMilliseconds(timesOfMeasure, LargeFoo.NativeMap)
+                Mapping = RepeatAndAccumulateMilliseconds(timesOfMeasure, StaticMapper<LargeFoo, LargeFoo>.Map),
+                Native = RepeatAndAccumulateMilliseconds(timesOfMeasure, LargeFoo.NativeMap2)
             };
             _output.WriteLine($"Amount of mapping iterations: {timesOfMeasure}\n" + result);
         }

@@ -106,15 +106,22 @@ namespace Photosphere.Mapping.Tests.TestClasses
         public int Property98 { get; set; }
         public int Property99 { get; set; }
 
+        public static Random Radom = new Random();
+
         internal static LargeFoo GetRandomNew()
         {
             var instance = new LargeFoo();
-            var radom = new Random();
             foreach (var property in instance.GetType().GetProperties())
             {
-                property.SetValue(instance, radom.Next());
+                property.SetValue(instance, Radom.Next());
             }
+            
             return instance;
+        }
+
+        internal static void NativeMap2(LargeFoo source, LargeFoo target)
+        {
+            NativeMap(source, target);
         }
 
         internal static void NativeMap(LargeFoo source, LargeFoo target)
