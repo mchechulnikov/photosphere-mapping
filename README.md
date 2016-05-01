@@ -1,5 +1,6 @@
 # Photosphere.Mapping
-Simple hight perfomance object mapper based on emitting CIL code.
+Simple hight perfomance flat object mapper based on emitting CIL code.<br/>
+It perform mapping by properties names and assignable types.
 
 ## Status
 [![Windows build Status](https://ci.appveyor.com/api/projects/status/github/sunloving/photosphere-mapping?retina=true&svg=true)](https://ci.appveyor.com/project/sunloving/photosphere-mapping)
