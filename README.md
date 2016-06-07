@@ -42,8 +42,7 @@ var target = source.MapObject<Bar>();
 but not vice versa (to anonymous type object), because anonymous type objects are immutable by design.
 
 ## Perfomance
-You can see [perfomance test](https://github.com/sunloving/photosphere-mapping/blob/master/src/Photosphere.Mapping.Tests/MapPerfomanceTests.cs) and [pefromance test result](https://ci.appveyor.com/project/sunloving/photosphere-mapping/build/tests).<br/>
-It is easy to see that at the start it takes longer than a manual mapping, but then it grows no faster than `O(n)` where `n` is a number of iterations.
+You can see [perfomance test](https://github.com/sunloving/photosphere-mapping/blob/master/src/Photosphere.Mapping.Tests/MapPerfomanceTests.cs) and [pefromance test result](https://ci.appveyor.com/project/sunloving/photosphere-mapping/build/tests).
 
 ## License
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/sunloving/photosphere-mapping/blob/master/LICENSE)
