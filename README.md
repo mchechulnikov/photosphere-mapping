@@ -49,4 +49,4 @@ You can see [perfomance test](https://github.com/sunloving/photosphere-mapping/b
 
 ## Other Photosphere projects
 * [Photosphere.DependencyInjection](https://github.com/sunloving/photosphere-di)
-* [Photosphere.MemoryAllocation](https://github.com/sunloving/photosphere-memalloc)
+* [Photosphere.MemoryProfiler](https://github.com/sunloving/photosphere-memprofiler)
