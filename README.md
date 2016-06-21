@@ -5,6 +5,7 @@ It perform mapping by properties names and assignable types.
 ## Status
 [![Windows build Status](https://ci.appveyor.com/api/projects/status/github/sunloving/photosphere-mapping?retina=true&svg=true)](https://ci.appveyor.com/project/sunloving/photosphere-mapping)
 [![NuGet](https://img.shields.io/nuget/v/Photosphere.Mapping.svg)](https://www.nuget.org/packages/Photosphere.Mapping/)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/sunloving/photosphere-mapping/blob/master/LICENSE)
 
 ## Install via NuGet
 ```
@@ -43,9 +44,6 @@ but not vice versa (to anonymous type object), because anonymous type objects ar
 
 ## Perfomance
 You can see [perfomance test](https://github.com/sunloving/photosphere-mapping/blob/master/src/Photosphere.Mapping.Tests/MapPerfomanceTests.cs) and [pefromance test result](https://ci.appveyor.com/project/sunloving/photosphere-mapping/build/tests).
-
-## License
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/sunloving/photosphere-mapping/blob/master/LICENSE)
 
 ## Other Photosphere projects
 * [Photosphere.DependencyInjection](https://github.com/sunloving/photosphere-di)
