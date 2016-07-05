@@ -44,7 +44,3 @@ but not vice versa (to anonymous type object), because anonymous type objects ar
 
 ## Perfomance
 You can see [perfomance test](https://github.com/sunloving/photosphere-mapping/blob/master/src/Photosphere.Mapping.Tests/MapPerfomanceTests.cs) and [pefromance test result](https://ci.appveyor.com/project/sunloving/photosphere-mapping/build/tests).
-
-## Other Photosphere projects
-* [Photosphere.DependencyInjection](https://github.com/sunloving/photosphere-di)
-* [Photosphere.MemoryProfiler](https://github.com/sunloving/photosphere-memprofiler)
