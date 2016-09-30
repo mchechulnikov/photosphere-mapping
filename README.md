@@ -1,5 +1,5 @@
 # Photosphere.Mapping
-Simple hight perfomance flat object mapper based on emitting CIL code.<br/>
+Simple high perfomance flat object mapper based on emitting CIL code.<br/>
 It perform mapping by properties names and assignable types.
 
 ## Status
