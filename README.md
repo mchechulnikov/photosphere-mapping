@@ -1,5 +1,5 @@
 # Photosphere.Mapping
-Simple flat object mapper based on emitting CIL code.<br/>
+Simple high performance flat object mapper based on emitting CIL code.<br/>
 It perform mapping by properties names and assignable types.
 
 ## Status
@@ -41,3 +41,6 @@ var source = new { A = "a", B = 1 };
 var target = source.MapObject<Bar>();
 ```
 but not vice versa (to anonymous type object), because anonymous type objects are immutable by design.
+
+## Perfomance		
+You can see [perfomance test](https://github.com/sunloving/photosphere-mapping/blob/master/src/Photosphere.Mapping.Tests/MapPerfomanceTests.cs) and [pefromance test result](https://ci.appveyor.com/project/sunloving/photosphere-mapping/build/tests).
